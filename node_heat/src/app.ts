@@ -5,6 +5,8 @@ import { router } from "./routes";
 
 
 const app = express();
+// Allow requests in JSON form
+app.use(express.json());
 
 app.use(router);
 
@@ -12,7 +14,7 @@ app.get("/github", (request, response) => {
     response.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`)
 })
 
-//github will return a code that will be used 
+//github will use this callback route to return a code
 app.get("/signin/callback", (request, response) => {
     const { code } = request.query;
 
