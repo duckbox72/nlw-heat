@@ -6,6 +6,7 @@ import { api } from '../services/api';
 type User = {
     id: string;
     login: string;
+    name: string;
     avatar_url: string;
 }
 
