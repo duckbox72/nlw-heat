@@ -36,6 +36,7 @@ export function SendMessageForm() {
                 <strong className={styles.userName}>{user?.name}</strong>
                 <span className={styles.userGithub}>
                     <VscGithubInverted size="16" />
+                    {user?.login}
                 </span>
             </header>
 
