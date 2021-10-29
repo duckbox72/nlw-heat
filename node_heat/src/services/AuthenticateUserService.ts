@@ -3,7 +3,7 @@ import prismaClient from "../prisma";
 import { sign } from 'jsonwebtoken';
 
 /**
- * Receive code(string)
+ * Receive code(string) -- this request will be originated from the Front-End
  * Retrieve the access_token from github
  * Retrieve User Information from github
  * Verify if user exists in DB:
